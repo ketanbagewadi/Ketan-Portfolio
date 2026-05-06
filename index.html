@@ -594,6 +594,30 @@
             animation: chHop 0.45s ease forwards;
         }
 
+        .tl-card::after {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 60%;
+            height: 250%;
+            background: linear-gradient(105deg,
+                    transparent 20%,
+                    rgba(255, 255, 255, 0.08) 40%,
+                    rgba(255, 255, 255, 0.18) 50%,
+                    rgba(255, 255, 255, 0.08) 60%,
+                    transparent 80%);
+            transform: skewX(-15deg);
+            transition: left 0.6s ease, top 0.6s ease;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .tl-card:hover::after {
+            left: 150%;
+            top: -100%;
+        }
+
         /* stagger via nth-child */
         .char-hover-wrap .ch:nth-child(1) {
             animation-delay: 0.00s
@@ -2765,6 +2789,23 @@
             animateVelocity();
         })();
 
+
+        document.querySelectorAll('.tl-card').forEach(card => {
+            const glare = document.createElement('div');
+            glare.classList.add('glare');
+            card.appendChild(glare);
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                glare.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(255,255,255,0.18), transparent 60%)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                glare.style.background = '';
+            });
+        });
     </script>
 </body>
 
