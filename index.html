@@ -1637,7 +1637,6 @@
             </div>
         </div>
         <div class="absolute right-8 top-1/2 -translate-y-1/2 text-right z-20 flex flex-col items-end">
-            <!-- <div class="w-[1px] h-16 bg-gray-500 mb-4 mr-1"></div> -->
             <p class="text-xs tracking-widest text-gray-500" style="writing-mode:vertical-rl;text-orientation:mixed;">
                 Ketan
             </p>
@@ -1654,7 +1653,6 @@
             <div id="outer-box"
                 style="overflow:hidden;flex-direction:column;justify-content:space-between;padding:40px 0;">
                 <!-- TOP MARQUEE -->
-                <!-- TOP MARQUEE -->
                 <div
                     style="width:100%;overflow:hidden;background:transparent;padding:6px 0;flex-shrink:0;position:relative;">
                     <div class="vel-track" data-direction="1" style="display:flex;white-space:nowrap;">
@@ -1670,8 +1668,8 @@
                 <div id="inner-box">
                     <div id="inner-box-content"
                         style="padding:0;width:100%;height:100%;overflow:hidden;border-radius:inherit;">
-                        <img src="ketan.jpg" alt="Ketan"
-                            style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;" />
+                        <img src="tweet.png" alt="Ketan"
+                            style="width:100%;height:100%;object-fit:contain;display:block;border-radius:inherit;background:#111;" />
                     </div>
                 </div>
                 <!-- BOTTOM MARQUEE -->
@@ -1703,10 +1701,16 @@
             </div>
             <div class="stats-right">
                 <p class="stats-body blur-in">
-                    <span class="lime-dot"></span>Every product I build starts with understanding user goals and
-                    translating them into intuitive, high-performance experiences.
-                    From concept to launch, I focus on meaningful results — boosting
-                    user engagement, retention, and overall business impact.
+                    <span class="lime-dot"></span>I am deeply interested in cybersecurity, with a strong focus on
+                    identifying
+                    phishing threats and malicious domains. Phishing remains one of the most common and dangerous attack
+                    vectors,
+                    targeting users through deceptive websites and communications. Through my work, I have actively
+                    analyzed and
+                    identified numerous phishing and malicious domains in real-time gateway and production environments,
+                    contributing to safer digital ecosystems.<br>To date, my analysis has led to the detection of
+                    phishing/malicious
+                    domains.
                 </p>
                 <div class="stats-divider"></div>
                 <p class="stat-label">Projects Completed</p>
@@ -2347,26 +2351,7 @@
 
         </div>
 
-        <!-- Giant name at very bottom -->
         <div class="ct-big-name">KETAN</div>
-
-        <!-- animated video========================================================================================================= -->
-        <!-- <div style="position:relative;width:100%;display:flex;justify-content:center;padding:10px 0 30px;">
-      <svg width="100%" height="160" viewBox="0 0 1000 160" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <mask id="text-mask">
-            <text x="50%" y="130" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="155"
-              letter-spacing="-4" fill="white">KETAN</text>
-          </mask>
-        </defs>
-        <foreignObject width="1000" height="160" mask="url(#text-mask)">
-          <video xmlns="http://www.w3.org/1999/xhtml" autoplay loop muted playsinline
-            style="width:100%;height:100%;object-fit:cover;">
-            <source src="home.mp4" type="video/mp4">
-          </video>
-        </foreignObject>
-      </svg>
-    </div> -->
 
     </section>
 
@@ -2495,7 +2480,7 @@
             if (e <= 0.55) {
                 iW = oW * INNER_RATIO_W; iH = oH * INNER_RATIO_H; iR = lerp(16, 10, e / 0.55);
             } else {
-                const paddingX = 220; // left & right
+                const paddingX = 290; // left & right
                 const paddingY = 120;  // top & bottom
                 iW = oW - paddingX * 2;
                 iH = oH - paddingY * 2;
