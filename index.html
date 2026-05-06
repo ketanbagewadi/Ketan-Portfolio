@@ -112,13 +112,10 @@
             background: #ffffff;
             display: flex;
             align-items: center;
-            justify-content: center;
             flex-direction: column;
-            /* ADD THIS */
-            justify-content: space-between;
-            /* ADD THIS */
+            justify-content: center;
+            gap: 50px;
             overflow: hidden;
-            /* ADD THIS */
         }
 
         #inner-box {
@@ -453,7 +450,7 @@
 
         .card-desc {
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.85);
             line-height: 1.6;
             max-height: 0;
             overflow: hidden;
@@ -462,7 +459,7 @@
         }
 
         .project-card:hover .card-desc {
-            max-height: 80px;
+            max-height: 120px;
             opacity: 1;
         }
 
@@ -575,7 +572,7 @@
         }
 
         .tl-card:hover .tl-desc {
-            color: #888;
+            color: #eceaea;
         }
 
         .tl-card:hover .tl-tag {
@@ -928,7 +925,7 @@
 
         .tl-desc {
             font-size: 13px;
-            color: #555;
+            color: #949393;
             line-height: 1.7;
             margin-bottom: 14px;
         }
@@ -1651,17 +1648,19 @@
     <section id="box-section">
         <div id="box-sticky">
             <div id="outer-box"
-                style="overflow:hidden;flex-direction:column;justify-content:space-between;padding:40px 0;">
+                style="overflow:hidden;flex-direction:column;justify-content:flex-end;padding:40px 0 60px;">
                 <!-- TOP MARQUEE -->
                 <div
                     style="width:100%;overflow:hidden;background:transparent;padding:6px 0;flex-shrink:0;position:relative;">
                     <div class="vel-track" data-direction="1" style="display:flex;white-space:nowrap;">
                         <span class="vel-content"
-                            style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',sans-serif;font-size:42px;font-weight:700;letter-spacing:-0.02em;text-transform:none;color:#020202;padding:0 30px;">KETAN
-                            BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ </span>
+                            style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',sans-serif;font-size:52px;font-weight:700;letter-spacing:-0.02em;text-transform:none;color:#020202;padding:0 30px;">Python
+                            · LLM · Machine Learning · AWS · Docker ·
+                        </span>
                         <span class="vel-content"
-                            style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',sans-serif;font-size:42px;font-weight:700;letter-spacing:-0.02em;text-transform:none;color:#000000;padding:0 30px;">KETAN
-                            BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ </span>
+                            style="font-family:-BlinkMacSystemFont,'SF Pro Display','Inter',sans-serif;font-size:52px;font-weight:700;letter-spacing:-0.02em;text-transform:none;color:#000000;padding:0 30px;">Python
+                            · LLM · Machine Learning · AWS · Docker ·
+                        </span>
                     </div>
                 </div>
                 <!-- INNER BOX -->
@@ -1672,18 +1671,7 @@
                             style="width:100%;height:100%;object-fit:contain;display:block;border-radius:inherit;background:#111;" />
                     </div>
                 </div>
-                <!-- BOTTOM MARQUEE -->
-                <div
-                    style="width:100%;overflow:hidden;background:transparent;padding:6px 0;flex-shrink:0;position:relative;">
-                    <div class="vel-track" data-direction="-1" style="display:flex;white-space:nowrap;">
-                        <span class="vel-content"
-                            style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',sans-serif;font-size:42px;font-weight:700;letter-spacing:-0.02em;text-transform:none;color:#020202;padding:0 40px;">KETAN
-                            BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ </span>
-                        <span class="vel-content"
-                            style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',sans-serif;font-size:42px;font-weight:700;letter-spacing:-0.02em;text-transform:none;color:#020202;padding:0 40px;">KETAN
-                            BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ KETAN BAGEWADI ✦ </span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -1769,9 +1757,13 @@
                         <span class="card-tag">Selenium</span>
                         <span class="card-tag">NLP</span>
                     </div>
-                    <p class="card-desc">Achieved 95–97% accuracy on live traffic. Dual classification system using
-                        Llama 3.1 8B
-                        and 250+ thread Selenium pipeline covering 40+ website categories.</p>
+                    <p class="card-desc">95–97% accuracy on live traffic. Dual classification using Llama 3.1 8B with
+                        RAG +
+                        250-thread Selenium pipeline. Also implemented Sentence-T5-XXL with cosine-similarity and
+                        zero-shot
+                        classification. Monitored with Prometheus & Grafana dashboards — 40% better visibility.
+                        Dynatrace for
+                        end-to-end observability.</p>
                 </div>
             </div>
 
@@ -1811,9 +1803,11 @@
                             <span class="card-tag">Zero-shot</span>
                             <span class="card-tag">Django</span>
                         </div>
-                        <p class="card-desc">Dual classification pipeline using LLM and NLP models across 40+ categories
-                            deployed in
-                            production.</p>
+                        <p class="card-desc">Deployed dual production pipeline across 40+ categories. Llama 3.1 8B with
+                            RAG for deep
+                            context understanding. Sentence-T5-XXL with cosine-similarity and zero-shot classification
+                            for lightweight
+                            inference. Served via Django REST Framework in production.</p>
                     </div>
                 </div>
 
@@ -1851,9 +1845,11 @@
                             <span class="card-tag">Nginx</span>
                             <span class="card-tag">Azure AD</span>
                         </div>
-                        <p class="card-desc">Multi-DB CRM with 30% faster read/write. Deployed on DigitalOcean with
-                            Azure Directory
-                            and Nginx.</p>
+                        <p class="card-desc">Built with Django, DRF, JavaScript, Ajax, Nginx, Gunicorn, Azure AD,
+                            DigitalOcean
+                            Droplet and PostgreSQL. Synced with 2+ database servers. Achieved 30% faster read/write
+                            operations. Fully
+                            deployed on Linux with end-to-end production setup.</p>
                     </div>
                 </div>
 
@@ -1912,9 +1908,11 @@
                             <span class="card-tag">Firebase</span>
                         </div>
                     </div>
-                    <p class="card-desc" style="max-width:320px;flex-shrink:0;">ResNeXt + LSTM architecture trained on
-                        FaceForensics++ and Celeb-DF. Paired with a ChatGPT-like Android app powered by Google PaLM-2
-                        API.</p>
+                    <p class="card-desc" style="max-width:320px;flex-shrink:0;">ResNeXt + LSTM trained on
+                        FaceForensics++ and
+                        Celeb-DF datasets for deepfake video classification. Android ChatBot powered by Google PaLM-2
+                        API with
+                        ChatGPT-like conversational flow, Firebase backend and real-time streaming responses.</p>
                 </div>
             </div>
 
