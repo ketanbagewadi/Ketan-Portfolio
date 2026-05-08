@@ -1010,7 +1010,7 @@
       font-size: 14px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #555;
+      color: #ffffff;
       margin-bottom: 18px;
       font-weight: 500;
     }
@@ -1018,7 +1018,7 @@
     .ct-col-link {
       display: block;
       font-size: 17px;
-      color: #bbb;
+      color: #a7a1a1;
       text-decoration: none;
       margin-bottom: 10px;
       font-weight: 400;
@@ -1039,7 +1039,7 @@
 
     /* Pill buttons — top right */
     .ct-pills {
-      margin-left: 100px;
+      margin-left: 230px;
       display: flex;
       align-items: flex-start;
       gap: 14px;
@@ -1633,7 +1633,9 @@
           style="width:270px;flex-shrink:0;object-fit:cover;margin-right:-20px;margin-left:40px;margin-top:-60px;mask-image:linear-gradient(to bottom, black 70%, transparent 100%);-webkit-mask-image:linear-gradient(to bottom, black 70%, transparent 100%);" />
       </div>
       <div class="flex justify-center">
-        <a href="#" class="shimmer-btn char-hover-wrap" id="about-me-btn" style="gap:0;letter-spacing:normal;">
+        <a href="#" class="shimmer-btn char-hover-wrap" id="about-me-btn"
+          style="gap:0;letter-spacing:normal;transition:transform 0.3s cubic-bezier(0.23,1,0.32,1),background 0.3s ease,color 0.3s ease;"
+          onmouseout="this.style.transform='translate(0px,0px)';">
           <span class="ch">A</span><span class="ch">b</span><span class="ch">o</span><span class="ch">u</span><span
             class="ch">t</span>&nbsp;<span class="ch">M</span><span class="ch">e</span>
         </a>
@@ -1915,9 +1917,9 @@
       style="max-width:1100px;margin:60px auto 0;padding:0 60px;display:flex;align-items:center;justify-content:space-between;">
       <p style="font-size:14px;color:#888;letter-spacing:2px;text-transform:uppercase;">More on GitHub</p>
       <a href="https://github.com/ketanbagewadi" target="_blank" id="view-all-btn"
-        style="display:flex;align-items:center;gap:10px;background:#0a0a0a;color:#fff;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:500;text-decoration:none;transition:all 0.3s ease;"
+        style="display:flex;align-items:center;gap:10px;background:#0a0a0a;color:#fff;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:500;text-decoration:none;transition:transform 0.3s cubic-bezier(0.23,1,0.32,1),background 0.3s ease,color 0.3s ease;"
         onmouseover="this.style.background='#bef264';this.style.color='#000';"
-        onmouseout="this.style.background='#0a0a0a';this.style.color='#fff';">
+        onmouseout="this.style.background='#0a0a0a';this.style.color='#fff';this.style.transform='translate(0px,0px)';">
         <i class="fab fa-github"></i> <span class="char-hover-wrap" style="display:inline-flex;gap:0;"><span
             class="ch">V</span><span class="ch">i</span><span class="ch">e</span><span class="ch">w</span>&nbsp;<span
             class="ch">A</span><span class="ch">l</span><span class="ch">l</span>&nbsp;<span class="ch">P</span><span
@@ -2291,6 +2293,7 @@
         <p class="ct-col-label">Links</p>
         <a href="#home-spacer" class="ct-col-link">Home</a>
         <a href="#projects-section" class="ct-col-link">Work</a>
+        <a href="#journey-section" class="ct-col-link">Journey</a>
         <a href="#about" class="ct-col-link">About</a>
         <a href="#contact-section" class="ct-col-link">Contact</a>
       </div>
@@ -2302,6 +2305,8 @@
         <a href="https://linkedin.com/in/ketan-bagewadi-7a5a24277" target="_blank" class="ct-col-link">Linkedin</a>
         <a href="https://wa.me/919741283315" target="_blank" class="ct-col-link">Whatsapp</a>
         <a href="https://github.com/ketanbagewadi" target="_blank" class="ct-col-link">Github</a>
+        <a href="https://www.instagram.com/ketan_bagewadi?igsh=MTFwdzQxcGYyZGNudQ%3D%3D&utm_source=qr" target="_blank"
+          class="ct-col-link">Instagram</a>
       </div>
 
       <!-- LOCAL TIME -->
@@ -2318,9 +2323,12 @@
 
       <!-- Right pill buttons -->
       <div class="ct-pills">
-        <a href="tel:+919741283315" class="shimmer-btn">+91 97412 83315</a>
-
-        <a href="mailto:bagewadiketan@gmail.com" class="shimmer-btn">bagewadiketan@gmail.com</a>
+        <a href="tel:+919741283315" class="shimmer-btn">
+          <i class="fas fa-phone"></i> Let's Talk
+        </a>
+        <a href="mailto:bagewadiketan@gmail.com" class="shimmer-btn">
+          <i class="fas fa-paper-plane"></i> Hire Me
+        </a>
 
 
       </div>
@@ -2775,6 +2783,35 @@
 
       card.addEventListener('mouseleave', () => {
         glare.style.background = '';
+      });
+    });
+  </script>
+  <script>
+    document.getElementById('view-all-btn').addEventListener('mousemove', function (e) {
+      const r = this.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width / 2;
+      const y = e.clientY - r.top - r.height / 2;
+      this.style.transform = 'translate(' + (x * 0.3) + 'px,' + (y * 0.3) + 'px)';
+    });
+  </script>
+  <script>
+    document.getElementById('about-me-btn').addEventListener('mousemove', function (e) {
+      const r = this.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width / 2;
+      const y = e.clientY - r.top - r.height / 2;
+      this.style.transform = 'translate(' + (x * 0.3) + 'px,' + (y * 0.3) + 'px)';
+    });
+  </script>
+  <script>
+    document.querySelectorAll('.ct-pill, .ct-pills .shimmer-btn').forEach(btn => {
+      btn.addEventListener('mousemove', function (e) {
+        const r = this.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        this.style.transform = 'translate(' + (x * 0.3) + 'px,' + (y * 0.3) + 'px)';
+      });
+      btn.addEventListener('mouseleave', function () {
+        this.style.transform = 'translate(0px, 0px)';
       });
     });
   </script>
