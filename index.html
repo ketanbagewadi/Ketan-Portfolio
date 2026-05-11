@@ -2262,9 +2262,6 @@
         filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.2));
       }
     </style>
-
-
-
   </section>
 
 
@@ -2291,12 +2288,8 @@
 
     <!-- Floating cursor dot -->
     <div class="ct-cursor-dot" id="ct-cursor" style="opacity:0;"></div>
-
-
-
     <!-- ── TOP INFO BAR ── -->
     <div class="ct-topbar">
-
       <!-- LINKS -->
       <div class="ct-col">
         <p class="ct-col-label">Links</p>
@@ -2338,22 +2331,12 @@
         <a href="mailto:bagewadiketan@gmail.com" class="shimmer-btn">
           <i class="fas fa-paper-plane"></i> Hire Me
         </a>
-
-
       </div>
-
     </div>
-
-
     </div>
-
     </div>
-
     </div>
-
-
     </div>
-
     <div class="ct-big-name">KETAN</div>
 
   </section>
@@ -2548,7 +2531,6 @@
     window.addEventListener('scroll', updateTimeline, { passive: true });
     updateTimeline();
 
-
     /* ── LIVE LOCAL TIME (IST) ── */
     function updateContactTime() {
       const now = new Date();
@@ -2571,7 +2553,6 @@
     });
     document.addEventListener('mouseleave', () => { cursorDot.style.opacity = '0'; });
 
-
     /* Topbar char split */
     document.querySelectorAll('.ct-col-link').forEach(link => {
       link.innerHTML = link.textContent.split('').map(c =>
@@ -2586,7 +2567,6 @@
         c === ' ' ? ' ' : `<span class="ch">${c}</span>`
       ).join('');
     }
-
 
     document.querySelectorAll('.word-animate').forEach(el => {
       const isAbout = el.closest('#about') !== null;
@@ -2605,8 +2585,6 @@
     }, { threshold: 0.2 });
 
     document.querySelectorAll('.word-animate').forEach(el => wordObs.observe(el));
-
-
 
     function typeText(el, text, speed, callback) {
       el.classList.add('typing-cursor');
@@ -2712,7 +2690,6 @@
 
     document.querySelectorAll('.stat-number[data-target]').forEach(el => statObs.observe(el));
 
-
     const blurObs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -2739,7 +2716,7 @@
 
     document.querySelectorAll('.slide-left-chars').forEach(el => slideObs.observe(el));
 
-    /* ── SCROLL VELOCITY MARQUEE ── */
+    /*  SCROLL VELOCITY MARQUEE  */
     (function () {
       const tracks = document.querySelectorAll('.vel-track');
       const baseVelocity = 1.5;
