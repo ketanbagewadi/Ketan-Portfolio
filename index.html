@@ -1584,7 +1584,7 @@
     </nav>
 
     <video class="absolute inset-0 w-full h-full object-cover" style="z-index:0;" autoplay loop muted playsinline>
-      <source src="assets/home.mp4" type="video/mp4">
+      <source src="home.mp4" type="video/mp4">
     </video>
 
     <div class="w-full h-full flex items-center justify-center relative" style="z-index:1;">
@@ -1631,7 +1631,7 @@
             </p>
           </div>
         </div>
-        <img src="assets/profilepic.jpeg" alt="Ketan"
+        <img src="profilepic.jpeg" alt="Ketan"
           style="width:270px;flex-shrink:0;object-fit:cover;margin-right:-20px;margin-left:40px;margin-top:-60px;mask-image:linear-gradient(to bottom, black 70%, transparent 100%);-webkit-mask-image:linear-gradient(to bottom, black 70%, transparent 100%);" />
       </div>
       <div class="flex justify-center">
@@ -1679,7 +1679,7 @@
         <!-- INNER BOX -->
         <div id="inner-box">
           <div id="inner-box-content" style="padding:0;width:100%;height:100%;overflow:hidden;border-radius:inherit;">
-            <img src="assets/tweet.png" alt="Ketan"
+            <img src="tweet.png" alt="Ketan"
               style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;background:#111;" />
           </div>
         </div>
@@ -2264,7 +2264,6 @@
     </style>
   </section>
 
-
   <section id="terminal-section"
     style="background:#0a0a0a;padding:80px 0;display:flex;align-items:center;justify-content:center;position:relative;z-index:10;">
     <div id="terminal-box"
@@ -2288,8 +2287,12 @@
 
     <!-- Floating cursor dot -->
     <div class="ct-cursor-dot" id="ct-cursor" style="opacity:0;"></div>
+
+
+
     <!-- ── TOP INFO BAR ── -->
     <div class="ct-topbar">
+
       <!-- LINKS -->
       <div class="ct-col">
         <p class="ct-col-label">Links</p>
@@ -2297,7 +2300,8 @@
         <a href="#about" class="ct-col-link">About</a>
         <a href="#projects-section" class="ct-col-link">Work</a>
         <a href="#journey-section" class="ct-col-link">Journey</a>
-        <a href="#contact-section" class="ct-col-link">Contact</a>
+        <a onclick="document.getElementById('contact-modal').style.display='flex'" class="ct-col-link"
+          style="cursor:pointer;">Contact</a>
       </div>
 
       <!-- SOCIALS -->
@@ -2325,18 +2329,28 @@
 
       <!-- Right pill buttons -->
       <div class="ct-pills">
-        <a href="tel:+919741283315" class="shimmer-btn">
-          <i class="fas fa-phone"></i> Let's Talk
+        <a href="assets/Ketan_Bagewadi.pdf" target="_blank" class="shimmer-btn">
+          <i class="fas fa-file-alt"></i> Resume
         </a>
         <a href="mailto:bagewadiketan@gmail.com" class="shimmer-btn">
           <i class="fas fa-paper-plane"></i> Hire Me
         </a>
+
+
       </div>
+
     </div>
+
+
     </div>
+
     </div>
+
     </div>
+
+
     </div>
+
     <div class="ct-big-name">KETAN</div>
 
   </section>
@@ -2491,7 +2505,7 @@
     computeTarget();
     tick();
 
-    /* ── TIMELINE SCROLL FILL ── */
+    /* TIMELINE SCROLL FILL  */
     const timelineFill = document.getElementById('timeline-fill');
     const timelineWrap = document.getElementById('timeline-wrap');
     const timelineItems = document.querySelectorAll('.timeline-item');
@@ -2531,6 +2545,7 @@
     window.addEventListener('scroll', updateTimeline, { passive: true });
     updateTimeline();
 
+
     /* ── LIVE LOCAL TIME (IST) ── */
     function updateContactTime() {
       const now = new Date();
@@ -2553,6 +2568,7 @@
     });
     document.addEventListener('mouseleave', () => { cursorDot.style.opacity = '0'; });
 
+
     /* Topbar char split */
     document.querySelectorAll('.ct-col-link').forEach(link => {
       link.innerHTML = link.textContent.split('').map(c =>
@@ -2567,6 +2583,7 @@
         c === ' ' ? ' ' : `<span class="ch">${c}</span>`
       ).join('');
     }
+
 
     document.querySelectorAll('.word-animate').forEach(el => {
       const isAbout = el.closest('#about') !== null;
@@ -2585,6 +2602,8 @@
     }, { threshold: 0.2 });
 
     document.querySelectorAll('.word-animate').forEach(el => wordObs.observe(el));
+
+
 
     function typeText(el, text, speed, callback) {
       el.classList.add('typing-cursor');
@@ -2690,6 +2709,7 @@
 
     document.querySelectorAll('.stat-number[data-target]').forEach(el => statObs.observe(el));
 
+
     const blurObs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -2716,7 +2736,7 @@
 
     document.querySelectorAll('.slide-left-chars').forEach(el => slideObs.observe(el));
 
-    /*  SCROLL VELOCITY MARQUEE  */
+    /* ── SCROLL VELOCITY MARQUEE ── */
     (function () {
       const tracks = document.querySelectorAll('.vel-track');
       const baseVelocity = 1.5;
@@ -2801,6 +2821,48 @@
       });
     });
   </script>
+  <div id="contact-modal"
+    style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:99999;align-items:center;justify-content:center;backdrop-filter:blur(8px);">
+    <div
+      style="background:#111;border:1px solid #2a2a2a;border-radius:24px;padding:56px 72px;min-width:420px;text-align:center;position:relative;box-shadow:0 0 60px rgba(0,0,0,0.6);">
+
+      <button onclick="document.getElementById('contact-modal').style.display='none'"
+        style="position:absolute;top:18px;right:22px;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;font-size:16px;cursor:pointer;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.2s ease;">✕</button>
+
+      <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#bef264;margin-bottom:10px;">Get In
+        Touch</p>
+      <h2 style="font-size:28px;font-weight:700;color:#fff;letter-spacing:-0.02em;margin-bottom:8px;">Let's Connect</h2>
+      <p style="font-size:13px;color:#555;margin-bottom:36px;">Feel free to reach out for collaborations or just a
+        hello.</p>
+
+      <div style="height:1px;background:#2a2a2a;margin-bottom:32px;"></div>
+
+      <a href="mailto:bagewadiketan@gmail.com"
+        style="display:flex;align-items:center;gap:16px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:14px;padding:18px 24px;text-decoration:none;margin-bottom:14px;transition:border-color 0.2s ease;"
+        onmouseover="this.style.borderColor='#bef264'" onmouseout="this.style.borderColor='#2a2a2a'">
+        <span
+          style="width:40px;height:40px;background:#0f0f0f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📧</span>
+        <div style="text-align:left;">
+          <p style="font-size:11px;color:#555;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Email</p>
+          <p style="font-size:15px;color:#fff;font-weight:500;">bagewadiketan@gmail.com</p>
+        </div>
+      </a>
+
+      <a href="tel:+919741283315"
+        style="display:flex;align-items:center;gap:16px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:14px;padding:18px 24px;text-decoration:none;transition:border-color 0.2s ease;"
+        onmouseover="this.style.borderColor='#bef264'" onmouseout="this.style.borderColor='#2a2a2a'">
+        <span
+          style="width:40px;height:40px;background:#0f0f0f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">📞</span>
+        <div style="text-align:left;">
+          <p style="font-size:11px;color:#555;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">Phone</p>
+          <p style="font-size:15px;color:#fff;font-weight:500;">+91 97412 83315</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+  </div>
+  </div>
 </body>
 
 </html>
